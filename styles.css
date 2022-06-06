@@ -104,7 +104,11 @@ body {
   fill: var(--icon-color);
 }
 
-.contact-info__item:hover .contact-info__item-icon path  {
+.intro__icon path {
+  fill: var(--text-decoration-color);
+}
+
+.contact-info__item:hover .contact-info__item-icon path {
   fill: var(--text-decoration-color);
   transition: fill 0.4s;
 }
@@ -138,10 +142,6 @@ body {
 .intro__icon {
   height: 1.1428rem;
   vertical-align: text-bottom;
-}
-
-.intro__icon path {
-  fill: var(--text-decoration-color);
 }
 
 .intro_text {
@@ -255,7 +255,6 @@ body {
 }
 
 @media screen and (max-width: 576px) {
-
   .main-info,
   .contact_info_container {
     flex-direction: column;
@@ -277,7 +276,7 @@ body {
     color: var(--secondary-text-color);
   }
 
-  .contact-info__item:hover .contact-info__item-icon path  {
+  .contact-info__item:hover .contact-info__item-icon path {
     fill: var(--icon-color);
   }
 }
