@@ -12,8 +12,8 @@ body {
   --secondary-text-color: #5c5c62;
   --durability-text-color: #6a737d9c;
   --icon-color: #6a737d;
-  --border-color: #ff9a0045;
-  --text-decoration-color: #ff9a00;
+  --border-color: #0abab5;
+  --text-decoration-color: #0abab5;
 }
 
 .container {
@@ -48,26 +48,6 @@ body {
   margin-bottom: 15px;
 }
 
-@media screen and (max-width: 576px) {
-
-  .main-info,
-  .contact_info_container {
-    flex-direction: column;
-  }
-
-  .contact_info_container {
-    align-items: center;
-  }
-
-  .contact-info__block:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  .experiences {
-    margin-right: 0;
-  }
-}
-
 .contact-info__header,
 .contact-info__sub-header {
   text-align: center;
@@ -99,7 +79,14 @@ body {
   color: var(--secondary-text-color);
   text-decoration: none;
   display: flex;
+  align-items: center;
   justify-content: start;
+  transition: all 0.4s;
+}
+
+.contact-info__item:hover {
+  color: var(--text-decoration-color);
+  transition: color 0.4s;
 }
 
 .contact-info__item:not(:last-child) {
@@ -115,6 +102,11 @@ body {
 
 .contact-info__item-icon path {
   fill: var(--icon-color);
+}
+
+.contact-info__item:hover .contact-info__item-icon path  {
+  fill: var(--text-decoration-color);
+  transition: fill 0.4s;
 }
 
 .contact-info__item-icon {
@@ -260,4 +252,32 @@ body {
 
 .additional-info__languages-item {
   color: var(--secondary-text-color);
+}
+
+@media screen and (max-width: 576px) {
+
+  .main-info,
+  .contact_info_container {
+    flex-direction: column;
+  }
+
+  .contact_info_container {
+    align-items: center;
+  }
+
+  .contact-info__block:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .experiences {
+    margin-right: 0;
+  }
+
+  .contact-info__item:hover {
+    color: var(--secondary-text-color);
+  }
+
+  .contact-info__item:hover .contact-info__item-icon path  {
+    fill: var(--icon-color);
+  }
 }
